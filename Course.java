@@ -1,5 +1,6 @@
 package program4;
 
+import java.net.SocketPermission;
 import java.util.*;
 
 class Course {
@@ -30,10 +31,12 @@ class Student {
     }
 
     public void displayStudentInfo() {
+        System.out.println("Student Information:");
         System.out.println("Name: " + name);
         System.out.println("Program: " + program);
         System.out.println("Semester: " + semester);
         System.out.println("Registered Courses:");
+        
         for (Course c : courses) {
             System.out.println(" - " + c.name);
         }
